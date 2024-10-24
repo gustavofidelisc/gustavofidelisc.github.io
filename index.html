@@ -1,23 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello cruel world with HTML, CSS, and JavaScript</title>
-    <style>
-        body {
-            background: blue;
-        }
-        a {
-            color: white;
-            font-size: 2em;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GustavoFidelis - Personal Portifolio</title>
 </head>
 <body>
-    <a href="#" title="Click me" onclick="sayHello()">Hello, cruel HTML & CSS world !</a>
+    <header>
+        <nav>
+            <img id="inicio" src="images/nome.svg" alt="nome" class="nome">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Portifólio</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <p>Full Stack Developer</p>
+        <h1>Olá, Eu sou o <br>
+            <span>Gustavo Fidelis</span>
+        </h1>
+    </header>
+
+    <main>
+        <!------------------------- Sobre ------------------->
+        <section id="sobre" class="sobre">
+            <div class="linha">
+                <div class="sobre-coluna-1">
+                    <img src="./images/eu.svg" alt="foto-gustavo" class="foto-gustavo">
+                </div>
+                <div class="sobre-coluna-2">
+                    <h1 class="sub-titulo">Sobre Mim</h1>
+                    <p>
+                        Tenho 21 anos, nascido em Alfenas-MG. Sou estudante de Ciência da Computação pela <abbr title="Universidade Federal de Alfenas">UNIFAL-MG</abbr>,
+                        atualmente no 8º período. Atuo como desenvolvedor Back-End em um projeto financiado pela <abbr title="Fundação de Amparo à Pesquisa do Estado de Minas Gerais">FAPEMIG</abbr>, 
+                        onde desenvolvo e utilizo APIs RESTful utilizando o padrão CRUD (Create, Read, Update, Delete). Além de criar minhas próprias APIs, 
+                        também integro APIs de terceiros, como as do Google do Stripe com webhook para pagamento.
+                        Estou aprimorando minhas habilidades como desenvolvedor Full-Stack através do curso oferecido pelo Itera360. 
+                        Minha experiência acadêmica e profissional tem me proporcionado um forte entendimento de tecnologias como
+                        TypeScript, Node.js, Java, e frameworks como Express.js e springboot.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
-<script>
-    function sayHello() {
-        alert("Hello, cruel JavaScript world !");
-    }
-</script>
 </html>
