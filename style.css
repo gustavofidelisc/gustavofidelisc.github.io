@@ -9,7 +9,6 @@ body{
     color: white;
     background-color: #27301b;
     padding: 15px 8%;
-
 }
 
 /*------------------------- Header -------------------*/
@@ -51,7 +50,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #dcecae;
+    background: #b3d557;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -59,7 +58,7 @@ nav ul li a::after{
 }
 
 nav ul li a:hover::after{
-    color: #5c98bb;
+    color: #bde15b ;
     width: 100%;
 }
 
@@ -89,23 +88,22 @@ abbr{
 }
 
 
-
 header h1 {
     font-size: 60px;
     margin-top: 20px;
-    margin-left: 5%;
+    margin-left: 5.5%;
 
 }
 
 header p{
     margin-top: 6%;
     font-size: 30px;
-    margin-left: 5%;
+    margin-left: 5.5%;
 
 }
 
 header span{
-    color: #0e763d;
+    color: #bde15b ;
     margin-left: 45px;
 }
 
@@ -118,9 +116,6 @@ header span{
 .sobre{
     padding: 80px 0;
     color: #ababab;
-}
-
-.linha{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -138,4 +133,50 @@ header span{
     font-size: 60px;
     font-weight: 600;
     color: white;
+}
+
+.titulos-sobre{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.sobre-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.sobre-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #bde15b;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.sobre-links.link-ativo::after{
+    width: 50%;
+}
+
+.conteudos-sobre ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.conteudos-sobre ul li span{
+    color: #ccef6d;
+    font-size: 14px;
+}
+
+.conteudos-sobre{
+    display: none;
+}
+
+.conteudos-sobre.conteudo-ativo{
+    display: block;
 }

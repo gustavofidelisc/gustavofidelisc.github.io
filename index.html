@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="./index.js"></script>
     <title>GustavoFidelis - Personal Portifolio</title>
 </head>
 <body>
@@ -26,26 +27,83 @@
     </header>
 
     <main>
-        <!------------------------- Sobre ------------------->
+        <!-- Sobre Mim -->
         <section id="sobre" class="sobre">
-            <div class="linha">
-                <div class="sobre-coluna-1">
-                    <img src="./images/eu.svg" alt="foto-gustavo" class="foto-gustavo">
-                </div>
-                <div class="sobre-coluna-2">
-                    <h1 class="sub-titulo">Sobre Mim</h1>
-                    <p>
-                        Tenho 21 anos, nascido em Alfenas-MG. Sou estudante de Ciência da Computação pela <abbr title="Universidade Federal de Alfenas">UNIFAL-MG</abbr>,
-                        atualmente no 8º período. Atuo como desenvolvedor Back-End em um projeto financiado pela <abbr title="Fundação de Amparo à Pesquisa do Estado de Minas Gerais">FAPEMIG</abbr>, 
-                        onde desenvolvo e utilizo APIs RESTful utilizando o padrão CRUD (Create, Read, Update, Delete). Além de criar minhas próprias APIs, 
-                        também integro APIs de terceiros, como as do Google do Stripe com webhook para pagamento.
-                        Estou aprimorando minhas habilidades como desenvolvedor Full-Stack através do curso oferecido pelo Itera360. 
-                        Minha experiência acadêmica e profissional tem me proporcionado um forte entendimento de tecnologias como
-                        TypeScript, Node.js, Java, e frameworks como Express.js e springboot.
-                    </p>
-                </div>
-            </div>
+           <figure class="sobre-coluna-1">
+                <img src="./images/computador.gif" alt="Foto de Gustavo" class="foto-gustavo">
+            </figure> 
+
+            
+            <article class="sobre-coluna-2">
+                <h1 class="sub-titulo">Sobre Mim</h1>
+                <p>
+                    Tenho 21 anos, nascido em Alfenas-MG. Sou estudante de Ciência da Computação pela 
+                    <abbr title="Universidade Federal de Alfenas">UNIFAL-MG</abbr>, atualmente no 8º período. 
+                    Atuo como desenvolvedor Back-End em um projeto financiado pela 
+                    <abbr title="Fundação de Amparo à Pesquisa do Estado de Minas Gerais">FAPEMIG</abbr>, 
+                    onde desenvolvo APIs RESTful e integro APIs de terceiros, como Stripe com webhook.
+                    Aprimoro habilidades em desenvolvimento Full-Stack com o curso do Itera360, 
+                    especialmente com TypeScript, Node.js, Java, e frameworks como Express.js e Spring Boot.
+                </p>
+
+                <nav class="titulos-sobre">
+                    <p class="sobre-links link-ativo" onclick="opensobre('Habilidades')">Habilidades</p>
+                    <p class="sobre-links" onclick="opensobre('Experiências')" >Experiências</p>
+                    <p class="sobre-links" onclick="opensobre('Formação')" >Formação</p>
+                </nav>
+
+                <section class="conteudos-sobre conteudo-ativo" id="Habilidades">
+                    <ul>
+                        <li>
+                            <span>Full-Stack <br>
+                            </span>
+                                <p>Desenvolvimento de Software</p>
+                        </li>
+                        <li>
+                            <span>Desenvolvedor Web <br></span>
+                                <p>Back-End</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="conteudos-sobre" id="Experiências">
+                    <ul>
+                        <li>
+                            <span>FAPEMIG <br>
+                            </span>
+                                <p>Desenvolvimento de Software Back End</p>
+                        </li>
+
+                    </ul>
+                </section>
+                <section class="conteudos-sobre" id="Formação">
+                    <ul>
+                        <li>
+                            <span>UNIFAL-MG <br>
+                            </span>
+                                <p>Ciência da computação</p>
+                        </li>
+
+                    </ul>
+                </section>
+            </article>
         </section>
     </main>
+    <script>
+        var tablinks = document.getElementsByClassName("sobre-links")
+        var tabcontents = document.getElementsByClassName("conteudos-sobre")
+        function opensobre(tabname){
+
+
+            for(tablink of tablinks){
+                tablink.classList.remove("link-ativo");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("conteudo-ativo");
+            }
+            event.currentTarget.classList.add("link-ativo");
+            document.getElementById(tabname).classList.add("conteudo-ativo");
+        }
+    </script>
+    
 </body>
 </html>
