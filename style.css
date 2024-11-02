@@ -267,6 +267,85 @@ nav .fa-solid {
     display: none;
 }
 
+/*----------- Jogos -------------*/
+
+.interesses{
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+    padding: 80px 8%;
+}
+
+.interesses a{
+    text-decoration: none;
+    color: #bde15b;
+    border-bottom: 2px solid #bde15b;
+}
+
+.Jogos .text{
+    padding: 10px;
+    
+}
+
+.Jogos h1{
+    font-size: 30px;
+
+}
+
+.text h2{
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.text p{
+    font-size: 12px;
+    margin-left: 5.5%;
+    margin-bottom: 25px;
+    color: #ababab;
+}
+
+.header{
+    width: 98%;
+    height: 60px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid #ababab;
+}
+
+
+.logo-jogos ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar em múltiplas linhas, se necessário */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    list-style-type: none;
+}
+
+.logo-jogos li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; /* Espaçamento entre os itens */
+}
+
+.logo-jogos img {
+    width: 150px; /* Ajuste o tamanho conforme desejado */
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: transform 0.3s; /* Efeito de transição para hover */
+}
+.detalhes {
+    text-align: center;
+    margin-top: 8px;
+    border-bottom: 2px solid #bde15b;
+}
+
+.logo-jogos li:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
 
 
 /*---------------CSS Para celulares-------------*/
@@ -357,5 +436,14 @@ nav .fa-solid {
     .sobre-links{
         font-size: 16px;
         margin-right: 20px;
+    }
+
+    .logo-jogos img {
+        width: 80px; /* Ajuste o tamanho conforme desejado */
+        height: auto;
+        border-radius: 8px; /* Bordas arredondadas */
+    }
+    .detalhes{
+        font-size: 10px;
     }
 }

@@ -15,7 +15,7 @@
                 <li><a href="#inicio" onclick="fecharmenu()">Início</a></li>
                 <li><a href="#sobre" onclick="fecharmenu()">Sobre</a></li>
                 <!--<li><a href="#">Serviços</a></li>-->
-                <li><a href="#" onclick="fecharmenu()">Portifólio</a></li>
+                <li><a href="#interesses" onclick="fecharmenu()">Interesses</a></li>
                 <li><a href="#contato" onclick="fecharmenu()">Contato</a></li>
                 <i class="fa-solid fa-xmark" onclick="fecharmenu()"></i>
             </ul>
@@ -56,11 +56,23 @@
                         <li>
                             <span>Full-Stack <br>
                             </span>
-                                <p>Desenvolvimento de Software</p>
+                                <p>Desenvolvimento Back-End e Front-End</p>
                         </li>
                         <li>
-                            <span>Desenvolvedor Web <br></span>
-                                <p>Back-End</p>
+                            <span>Inglês Intermédiario <br></span>
+                        </li>
+                        <li class="linguagens">
+                            <span>Linguagens</span>
+                            <li><p title="Java">Java</p></li>
+                            <li><p title="C#">C#</p></li>
+                            <li><p title="TypeScript">TypeScript</p></li>
+                            <li><p title="JavaScript">JavaScript</p></li>
+                            <li><p title="C++">C++</p></li>
+                            <li><p title="C">C</p></li>
+                            <li><p title="Python">Python</p></li>
+                            <li><p title="HTML">HTML</p></li>
+                            <li><p title="CSS">CSS</p></li>
+                            <li><p title="React">React</p></li>                            
                         </li>
                     </ul>
                 </section>
@@ -86,6 +98,107 @@
                 </section>
             </article>
         </section>
+
+
+        <!-- Interesses Pessoais -->
+
+        <section id="interesses" class="interesses">
+            <section class="Jogos">
+                <h1>Interesses pessoais</h1>
+                    <div class="text">
+                        <h2>Jogos</h2>
+                        <p> Desde pequeno, sempre fui fascinado por jogos. Lembro que comecei com o PS2, onde eu e meu irmão passávamos horas jogando.
+                            Rock Hero era muito divertido, e eu curtia muito os jogos baseados em filmes e desenhos da época, 
+                            como Ben 10, Scooby-Doo, Monstros S.A.. No entanto, o jogo que realmente me deixou completamente viciado 
+                            foi Call of Duty: Black Ops 2 no Xbox 360. Eu jogava principalmente o modo zumbis com meus amigos de infância, 
+                            Quando finalmente tive um Xbox One, passei a zerar os jogos com mais frequência, viciado em acumular
+                            <abbr title="conquistas que mostram nosso progresso nos jogos">gamescore. Minha gamertag é <a href="https://www.xbox.com/pt-BR/play/user/Nosper1479" target="_blank">Nosper#1479</a>. </abbr> 
+                        </p>
+                    </div>
+                    <section>
+                        <div class="header">
+                            <h2>Alguns jogos que joguei</h2>
+                        </div>
+                        <div class="logo-jogos">
+                            <ul>
+                                <li>
+                                    <picture>
+                                        <img src="./images/bo2.jpeg" alt="Call Of Duty - Black ops 2">
+                                    </picture>
+                                    <div class="detalhes">
+                                        <p>
+                                            <b>Black Ops 2</b>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <picture>
+                                        <img src="./images/guitarhero.jpeg" alt="Guitar Hero 3">
+                                    </picture>
+                                    <div class="detalhes">
+                                        <p>
+                                            <b>Guitar Hero 3</b>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <picture>
+                                        <img src="./images/ben10.jpeg" alt="Ben 10">
+                                    </picture>
+                                    <div class="detalhes">
+                                        <p>
+                                            <b>Ben 10</b>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <picture>
+                                        <img src="./images/blackflag.jpeg" alt="Assassins Creed Black Flag">
+                                    </picture>
+                                    <div class="detalhes">
+                                        <p>
+                                            <b>Assassins Creed Black Flag</b>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <picture>
+                                        <img src="./images/fortnite.jpeg" alt="Fortnite">
+                                    </picture>
+                                    <div class="detalhes">
+                                        <p>
+                                            <b>Fortnite</b>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <picture>
+                                        <img src="./images/reddead2.jpeg" alt="Read Dead Redemption 2">
+                                    </picture>
+                                    <div class="detalhes">
+                                        <p>
+                                            <b>Read Dead Redemption 2</b>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <picture>
+                                        <img src="./images/watchdogs.jpeg" alt="Watch dogs">
+                                    </picture>
+                                    <div class="detalhes">
+                                        <p>
+                                            <b>Watch dogs</b>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+        </section>
+
         <!-- contato -->
         <section id="contato" class="contato">
             <div class="container">
@@ -142,5 +255,29 @@
         }
     </script>
     
+
+    <script>
+        let currentPosition = 0;
+        const itemWidth = 33.3; // Largura percentual de cada item
+        const totalItems = document.querySelectorAll('.logo-jogos li').length;
+        const visibleItems = 3;
+        const maxPosition = ((totalItems - visibleItems) * itemWidth);
+
+        function right_mover() {
+            if (currentPosition < maxPosition) {
+                currentPosition += itemWidth;
+                document.querySelector('.logo-jogos').style.transform = `translateX(-${currentPosition}%)`;
+            }
+        }
+
+        function left_mover() {
+            if (currentPosition > 0) {
+                currentPosition -= itemWidth;
+                document.querySelector('.logo-jogos').style.transform = `translateX(-${currentPosition}%)`;
+            }
+        }
+
+        
+    </script>
 </body>
 </html>
