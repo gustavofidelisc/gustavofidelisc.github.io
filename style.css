@@ -8,6 +8,7 @@
 body{
     color: white;
     background-color: #27301b;
+    padding: 15px 8%;
 }
 
 /*------------------------- Header -------------------*/
@@ -18,7 +19,8 @@ header{
     background: url('images/background.svg');
     background-size: cover;
     background-position: center;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .nome {
@@ -27,7 +29,6 @@ header{
   }
 
 nav{
-    padding: 15px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,21 +92,14 @@ abbr{
 
 
 header h1 {
-    padding: 15px 8%;
-
-    font-size: 60px;
-    margin-top: 20px;
-    margin-left: 5.5%;
-
-}
-
-header p{
-    padding: 15px 8%;
-
     margin-top: 6%;
     font-size: 30px;
     margin-left: 5.5%;
+}
 
+header p{
+    font-size: 60px;
+    margin-left: 5.5%;
 }
 
 header span{
@@ -120,7 +114,6 @@ header span{
 }
 
 .sobre, .linha{
-
     padding: 80px 8%;
     color: #ababab;
     display: flex;
@@ -269,25 +262,92 @@ form input, form textarea{
     border-radius: 6px;
 }
 
+nav .fa-solid {
+    display: none;
+}
+
+
 /*---------------CSS Para celulares-------------*/
 
 @media only screen and (max-width: 600px){
+    
     header{
         background-image: url('images/background-celular.svg');
+        background-size: cover;
+        background-position: center;
+    }
+    body {
+        padding: 15px 0%;
+    }
+
+    header h1, header p{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
     }
 
     header h1 {
-        font-size: 30px;
-        margin-top: -10px;
+        font-size: 16px;
     }
 
     header p{
-        margin-top: 60%;
         font-size: 30px;
     }
 
     header span{
         color: #bde15b ;
-        margin-left: 45px;
+        margin-left: 35px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #b3d557;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.7s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
+    .nome{
+        width: 70%;
+    }
+
+    .sub-titulo{
+        font-size: 40px;
+        margin-left: 10%;
+    }
+    .sobre-coluna-2, .sobre-coluna-1{
+        flex-basis: 100%;
+    }
+    .sobre-coluna-1{
+        margin-bottom: 30px;
+    }
+
+    .sobre-coluna-2{
+        font-size: 14px;
+    }
+
+    .sobre-links{
+        font-size: 16px;
+        margin-right: 20px;
     }
 }

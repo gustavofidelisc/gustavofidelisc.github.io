@@ -11,31 +11,30 @@
     <header>
         <nav>
             <img id="inicio" src="images/nome.svg" alt="nome" class="nome">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
+            <ul id="sidemenu">
+                <li><a href="#inicio" onclick="fecharmenu()">Início</a></li>
+                <li><a href="#sobre" onclick="fecharmenu()">Sobre</a></li>
                 <!--<li><a href="#">Serviços</a></li>-->
-                <li><a href="#">Portifólio</a></li>
-                <li><a href="#contato">Contato</a></li>
-
+                <li><a href="#" onclick="fecharmenu()">Portifólio</a></li>
+                <li><a href="#contato" onclick="fecharmenu()">Contato</a></li>
+                <i class="fa-solid fa-xmark" onclick="fecharmenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="abrirmenu()" ></i>
         </nav>
-        <p>Full Stack Developer</p>
-        <h1>Olá, Eu sou o <br>
-            <span>Gustavo Fidelis</span>
-        </h1>
+        <h1>Full Stack Developer</h1>
+        <p><strong>Olá, Eu sou o <br>
+            <span>Gustavo Fidelis</span></strong>
+        </p>
     </header>
 
     <main>
         <!-- Sobre Mim -->
+        <h1 class="sub-titulo">Sobre Mim</h1>
         <section id="sobre" class="sobre">
-           <figure class="sobre-coluna-1">
-                <img src="./images/computador.gif" alt="Foto de Gustavo" class="foto-gustavo">
-            </figure> 
-
-            
+            <figure class="sobre-coluna-1">
+                 <img src="./images/computador.gif" alt="Foto de Gustavo" class="foto-gustavo">
+             </figure> 
             <article class="sobre-coluna-2">
-                <h1 class="sub-titulo">Sobre Mim</h1>
                 <p>
                     Tenho 21 anos, nascido em Alfenas-MG. Sou estudante de Ciência da Computação pela 
                     <abbr title="Universidade Federal de Alfenas">UNIFAL-MG</abbr>, atualmente no 8º período. 
@@ -128,6 +127,18 @@
             }
             event.currentTarget.classList.add("link-ativo");
             document.getElementById(tabname).classList.add("conteudo-ativo");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function abrirmenu(){
+            sidemenu.style.right = '0';
+        }
+
+        function fecharmenu(){
+            sidemenu.style.right = '-200px';
         }
     </script>
     
